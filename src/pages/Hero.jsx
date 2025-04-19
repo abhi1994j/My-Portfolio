@@ -4,6 +4,7 @@ import { FiGithub } from "react-icons/fi";
 import { LuLinkedin } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation"; // <-- Import this
+import { MdOutlineEmail } from "react-icons/md";
 
 const Hero = () => {
   return (
@@ -57,10 +58,11 @@ const Hero = () => {
               </NavLink>
             </div>
 
-            <div className="flex items-center gap-2 text-xl md:text-2xl text-gray-500">
+            <div className="flex items-center gap-4 text-xl md:text-2xl text-gray-500">
               <NavLink className="hover:text-gray-700" to="">
                 <FiGithub />
               </NavLink>
+              <NavLink className="hover:text-gray-700"><MdOutlineEmail /></NavLink>
               <NavLink className="hover:text-gray-700" to="">
                 <LuLinkedin />
               </NavLink>

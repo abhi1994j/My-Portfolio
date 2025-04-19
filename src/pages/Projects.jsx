@@ -21,7 +21,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-5">
-            <div className=" bg-white border border-gray-200 rounded-lg shadow-sm">
+            <div className=" bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
               <a href="#">
                 <img
                   className="rounded-t-lg w-full h-50 object-center object-cover block"
@@ -71,7 +71,7 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-            <div className=" bg-white border border-gray-200 rounded-lg shadow-sm">
+            <div className=" bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out">
               <a href="#">
                 <img
                   className="rounded-t-lg w-full h-50 object-center object-cover block"

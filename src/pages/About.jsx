@@ -3,7 +3,7 @@ import { FiDatabase } from "react-icons/fi";
 import { RiExpandLeftRightLine } from "react-icons/ri";
 import { LuServer } from "react-icons/lu";
 const About = () => {
-  const skills = ["Javascript" , "TypeScript" , "React" , "Next.js" , "Node.js" , "Express" , "MongoDB" , "SQL" , "HTML/CSS" , "Tailwind CSS" , "Bootstrap" , "Git" , "Postman" , "Docker" , "AWS" , "REST API" , "Postman"]
+  const skills = ["Java" , "Javascript" , "TypeScript" , "React" , "Next.js" , "Node.js" , "Express" , "MongoDB" , "SQL" , "HTML/CSS" , "Tailwind CSS" , "Bootstrap" , "Git" , "Postman" , "Docker" , "AWS" , "REST API" , "Postman"]
 
   const technologies =[
     {
