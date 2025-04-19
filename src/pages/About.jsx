@@ -99,7 +99,7 @@ const About = () => {
           </div>
           <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {technologies.map((ele)=>
-                  <div className="flex flex-col gap-4 items-center bg-white border border-gray-300 rounded-lg py-8 px-4" key={ele.logo}>
+                  <div className="flex flex-col gap-4 items-center bg-white border border-gray-300 rounded-lg py-8 px-4 shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out" key={ele.logo}>
                         <span className="bg-gray-200  rounded-full"><ele.logo className="text-5xl p-3" />
                         </span>
                         <h1 className="text-xl font-semibold text-center">{ele.heading}</h1>
