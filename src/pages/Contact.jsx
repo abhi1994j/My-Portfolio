@@ -57,7 +57,7 @@ const Contact = () => {
             Connect with me on social media to stay updated with my latest
             projects and activities.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-2">
             <span className="bg-gray-50 hover:bg-gray-200 text-center rounded-full cursor-pointer">
               <FaGithub className="text-5xl p-3" />
             </span>
