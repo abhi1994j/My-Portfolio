@@ -1,0 +1,80 @@
+import { useState } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { RxCross2 } from "react-icons/rx";
+import { NavLink } from "react-router-dom";
+
+const Navbar = () => {
+  const [flag, setFlag] = useState(false);
+
+  function handleClick() {
+    setFlag(!flag);
+  }
+
+  return (
+    <>
+    <nav className="w-full py-4 px-2 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
+  <div className="flex justify-between items-center mx-2">
+    <span className="text-2xl font-semibold">Abhishek.</span>
+
+    <ul className="hidden md:flex md:items-center gap-8">
+      {["Home", "About", "Projects", "Contact"].map((item) => (
+        <li
+          key={item}
+          className="text-gray-600 hover:text-gray-900 active:text-gray-800 transition-colors duration-300 ease-in-out"
+        >
+          <NavLink
+            to=""
+            className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2"
+          >
+            {item}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
+
+    <NavLink
+      to=""
+      className="hidden text-center md:block py-2 px-4 text-white bg-black rounded-lg text-[16px] transition-all duration-300 hover:bg-gray-800"
+    >
+      Hire Me
+    </NavLink>
+
+    <button
+      className="text-2xl block md:hidden cursor-pointer transition-transform duration-300"
+      onClick={handleClick}
+    >
+      {flag ? <RxCross2 className="transition-transform duration-300 rotate-90" /> : <AiOutlineMenu />}
+    </button>
+  </div>
+</nav>
+
+
+      {/* Mobile Menu with transition */}
+      <section
+        className={`md:hidden fixed top-16 left-0 w-full bg-white shadow-md z-50 transition-all duration-500 ease-in-out transform ${
+          flag ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+        }`}
+      >
+        <div className="p-4 space-y-2">
+          {["Home", "About", "Projects", "Contact"].map((item) => (
+            <NavLink
+              key={item}
+              to=""
+              className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2"
+            >
+              {item}
+            </NavLink>
+          ))}
+          <NavLink
+            to=""
+            className="block py-2 mt-4 text-center text-white bg-black rounded-lg text-[14px] hover:bg-gray-800 transition-all duration-300"
+          >
+            Hire Me
+          </NavLink>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Navbar;
