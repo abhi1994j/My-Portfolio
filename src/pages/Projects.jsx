@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { LuExternalLink } from "react-icons/lu";
 import { FiGithub } from "react-icons/fi";
-import ecommerce from "../assets/Ecommerce.jpg"
+import ecommerce from "../assets/Ecommerce.jpg";
 const Projects = () => {
   return (
     <>
@@ -24,29 +24,50 @@ const Projects = () => {
             <div className=" bg-white border border-gray-200 rounded-lg shadow-sm">
               <a href="#">
                 <img
-                  className="rounded-t-lg w-full h-50 object-cover block"
+                  className="rounded-t-lg w-full h-50 object-center object-cover block"
                   src={ecommerce}
                   alt=""
                 />
               </a>
-              <div className="p-8 flex flex-col">
+              <div className="p-5 space-y-3 md:p-8 flex flex-col">
                 <a href="#">
-                  <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
+                  <h5 className=" text-xl font-bold tracking-tight text-gray-900">
                     E-Commerce Platform
                   </h5>
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  A full-featured e-commerce platform with product management, cart functionality, and payment integration.
+                <p className=" font-normal text-gray-700 dark:text-gray-400">
+                  A full-featured e-commerce platform with product management,
+                  cart functionality, and payment integration.
                 </p>
-                <div className="flex gap-2 mb-4">
-                      <span className="bg-gray-200 px-2 text-xs rounded py-1">React</span>
-                      <span className="bg-gray-200 px-2 text-xs rounded py-1">Node.js</span>
-                      <span className="bg-gray-200 px-2 text-xs rounded py-1">MongoDB</span>
-                      <span className="bg-gray-200 px-2 text-xs rounded py-1">Tailwind CSS</span>
-                </div>
+                <div className="flex flex-wrap md:flex-nowrap gap-2">
+                  <span className="bg-gray-200 px-1 md:px-2  text-center text-xs rounded py-1">
+                    React
+                  </span>
+                  <span className="bg-gray-200 px-2 md:px-2  text-center text-xs rounded py-1">
+                    Node.js
+                  </span>
+                  <span className="bg-gray-200 px-2 md:px-2  text-center text-xs rounded py-1">
+                    MongoDB
+                  </span>
+                  <span className="bg-gray-200 px-2 md:px-2  text-center text-xs rounded py-1">
+                    Tailwind CSS
+                  </span>
+                </div>          
                 <div className="flex gap-4">
-                    <NavLink className="text-center rounded-md flex gap-2 hover:bg-gray-100 items-center text-[14px] text-gray-900 border border-gray-300 py-1 px-3" to=''><LuExternalLink/><span>Live Demo</span></NavLink>
-                    <NavLink className="text-center hover:bg-gray-100 rounded-md flex gap-2 items-center text-[14px] text-gray-900 border border-gray-300 py-1 px-3" to=''><FiGithub/><span>Code</span></NavLink>
+                  <NavLink
+                    className="text-center rounded-md flex gap-2 hover:bg-gray-100 items-center text-[14px] text-gray-900 border border-gray-300 py-1 px-3"
+                    to=""
+                  >
+                    <LuExternalLink />
+                    <span>Live Demo</span>
+                  </NavLink>
+                  <NavLink
+                    className="text-center hover:bg-gray-100 rounded-md flex gap-2 items-center text-[14px] text-gray-900 border border-gray-300 py-1 px-3"
+                    to=""
+                  >
+                    <FiGithub />
+                    <span>Code</span>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -58,29 +79,49 @@ const Projects = () => {
                   alt=""
                 />
               </a>
-              <div className="p-8 flex flex-col">
+              <div className="p-5 space-y-3 md:p-8 flex flex-col">
                 <a href="#">
-                  <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
+                  <h5 className=" text-xl font-bold tracking-tight text-gray-900">
                     E-Commerce Platform
                   </h5>
                 </a>
-                <p className="mb-2 font-normal text-gray-700 dark:text-gray-400">
-                  A full-featured e-commerce platform with product management, cart functionality, and payment integration.
+                <p className=" font-normal text-gray-700 dark:text-gray-400">
+                  A full-featured e-commerce platform with product management,
+                  cart functionality, and payment integration.
                 </p>
-                <div className="flex gap-2 mb-4">
-                      <span className="bg-gray-200 px-2 text-center text-xs rounded py-1">React</span>
-                      <span className="bg-gray-200 px-2 text-center text-xs rounded py-1">Node.js</span>
-                      <span className="bg-gray-200 px-2 text-center text-xs rounded py-1">MongoDB</span>
-                      <span className="bg-gray-200 px-2 text-center text-xs rounded py-1">Tailwind CSS</span>
-                </div>
+                <div className="flex flex-wrap md:flex-nowrap gap-2">
+                  <span className="bg-gray-200 px-1 md:px-2  text-center text-xs rounded py-1">
+                    React
+                  </span>
+                  <span className="bg-gray-200 px-2 md:px-2  text-center text-xs rounded py-1">
+                    Node.js
+                  </span>
+                  <span className="bg-gray-200 px-2 md:px-2  text-center text-xs rounded py-1">
+                    MongoDB
+                  </span>
+                  <span className="bg-gray-200 px-2 md:px-2  text-center text-xs rounded py-1">
+                    Tailwind CSS
+                  </span>
+                </div>          
                 <div className="flex gap-4">
-                    <NavLink className="text-center rounded-md flex gap-2 hover:bg-gray-100 items-center text-[14px] text-gray-900 border border-gray-300 py-1 px-3" to=''><LuExternalLink/><span>Live Demo</span></NavLink>
-                    <NavLink className="text-center hover:bg-gray-100 rounded-md flex gap-2 items-center text-[14px] text-gray-900 border border-gray-300 py-1 px-3" to=''><FiGithub/><span>Code</span></NavLink>
+                  <NavLink
+                    className="text-center rounded-md flex gap-2 hover:bg-gray-100 items-center text-[14px] text-gray-900 border border-gray-300 py-1 px-3"
+                    to=""
+                  >
+                    <LuExternalLink />
+                    <span>Live Demo</span>
+                  </NavLink>
+                  <NavLink
+                    className="text-center hover:bg-gray-100 rounded-md flex gap-2 items-center text-[14px] text-gray-900 border border-gray-300 py-1 px-3"
+                    to=""
+                  >
+                    <FiGithub />
+                    <span>Code</span>
+                  </NavLink>
                 </div>
               </div>
             </div>
           </div>
-            
         </div>
       </section>
     </>

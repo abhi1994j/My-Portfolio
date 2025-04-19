@@ -32,11 +32,11 @@ const About = () => {
       <section className="w-[100%] bg-gray-50 flex justify-between items-center px-4 py-10">
         <div className="w-full flex flex-col items-center space-y-6">
           <div className="flex flex-col space-y-4 items-center w-full max-w-lg sm:max-w-xl md:max-w-4xl">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold">
+            <h1 className="text-3xl lg:text-4xl font-semibold">
               About Me
             </h1>
             <div className="h-1 rounded-lg w-20 bg-black inline-block"></div>
-            <div className="w-full max-wmd sm:max-w-lg md:max-w-xl">
+            <div className="w-full max-wmd sm:max-w-lg md:max-w-xl mb-4">
               <p className="text-[16px] text-gray-500 text-center">
                 I'm a passionate full stack developer with a focus on creating
                 efficient, scalable, and user-friendly web applications.
@@ -44,7 +44,7 @@ const About = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="left flex flex-col space-y-4 w-full px-4">
+            <div className="left flex flex-col space-y-4 w-full md:px-4">
               <h1 className="text-2xl font-semibold">My Journey</h1>
               <p className="text-gray-500">
                 With over 5 years of experience in web development, I've worked
@@ -61,8 +61,8 @@ const About = () => {
               </p>
             </div>
 
-            <div className="right flex flex-col space-y-4 px-4">
-              <h1 className="text-2xl font-semibold">Education & Experience</h1>
+            <div className="right flex flex-col space-y-4 md:px-4">
+              <h1 className="text-2xl mb-4 font-bold">Education & Experience</h1>
 
               <div className="flex flex-col">
                 <p className="font-semibold">Bachelor of Computer Science</p>
