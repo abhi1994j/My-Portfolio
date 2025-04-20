@@ -2,6 +2,8 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
 import { Link } from "react-scroll";
+import Ab from "../assets/Ab.svg";
+import Ac from "../assets/Ac.svg";
 
 const Navbar = () => {
   const [flag, setFlag] = useState(false);
@@ -32,9 +34,9 @@ const Navbar = () => {
   return (
     <>
       <nav className="w-full py-4 px-2 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
-        <div className="flex justify-between items-center mx-2">
-          <span className="text-2xl font-semibold">Abhishek.</span>
-
+        <div className="flex justify-between items-center mx-2"> 
+          <span className="md:block hidden text-2xl font-semibold gradient-text shadow-text ml-3">Abhishek.</span>
+          <span className="block md:hidden text-2xl font-semibold gradient-text shadow-text ml-2">AC.</span>
           <ul className="hidden md:flex md:items-center gap-8">
             {navItems.map((item) => (
               <li

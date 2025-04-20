@@ -10,7 +10,7 @@ import { Link } from "react-scroll";
 const Hero = () => {
   return (
     <>
-      <section className="px-2 py-10 w-[100%]">
+      <section className="px-1 md:px-2 py-10 w-[100%]">
         <div className="mt-4 mx-2 space-y-4 flex flex-col justify-between items-center md:flex-row p-2">
           <div className="flex flex-col justify-between md:items-start w-full md:w-1/2 space-y-6">
             <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl">
