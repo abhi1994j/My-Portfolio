@@ -60,7 +60,7 @@ const Projects = () => {
                   <h5
                     className="text-xl font-bold tracking-tight text-gray-900"
                     data-aos="fade-up"
-                    data-aos-delay={500 + index * 200}
+                    data-aos-delay={400 + index * 100}
                   >
                     E-Commerce Platform
                   </h5>
@@ -68,7 +68,7 @@ const Projects = () => {
                 <p
                   className="font-normal text-gray-700"
                   data-aos="fade-up"
-                  data-aos-delay={600 + index * 200}
+                  data-aos-delay={500 + index * 100}
                 >
                   A full-featured e-commerce platform with product management,
                   cart functionality, and payment integration.
@@ -76,7 +76,7 @@ const Projects = () => {
                 <div
                   className="flex flex-wrap md:flex-nowrap gap-2"
                   data-aos="fade-up"
-                  data-aos-delay={700 + index * 200}
+                  data-aos-delay={500 + index * 100}
                 >
                   {["React", "Node.js", "MongoDB", "Tailwind CSS"].map(
                     (tech, i) => (
@@ -92,7 +92,7 @@ const Projects = () => {
                 <div
                   className="flex gap-4"
                   data-aos="fade-up"
-                  data-aos-delay={800 + index * 200}
+                  data-aos-delay={600 + index * 100}
                 >
                   <NavLink
                     className="text-center rounded-md flex gap-2 hover:bg-gray-100 items-center text-[14px] text-gray-900 border border-gray-300 py-1 px-3"

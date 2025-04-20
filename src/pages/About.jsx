@@ -47,7 +47,7 @@ const About = () => {
         <div
           className="flex flex-col space-y-4 items-center w-full max-w-lg sm:max-w-xl md:max-w-4xl"
           data-aos="fade-right"
-          data-aos-delay="300"
+          data-aos-delay="200"
         >
           <h1 className="text-3xl lg:text-4xl font-semibold">About Me</h1>
           <div className="h-1 rounded-lg w-20 bg-black inline-block"></div>
@@ -82,7 +82,7 @@ const About = () => {
           <div
             className="right flex flex-col space-y-4 md:px-4"
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="400"
           >
             <h1 className="text-2xl mb-4 font-bold">Education & Experience</h1>
             <div className="flex flex-col">
@@ -101,7 +101,7 @@ const About = () => {
         </div>
 
         {/* Skills */}
-        <div className="mt-4 w-full" data-aos="zoom-in" data-aos-delay="300">
+        <div className="mt-4 w-full" data-aos="zoom-in" data-aos-delay="500">
           <h1 className="text-2xl font-bold mb-6 text-center">My Skills</h1>
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-6">
             {skills.map((ele, index) => (
