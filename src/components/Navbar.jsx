@@ -5,7 +5,6 @@ import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [flag, setFlag] = useState(false);
-  const [close, setClose] = useState(false);
 
 
   function handleClick() {
