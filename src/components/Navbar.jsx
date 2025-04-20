@@ -88,18 +88,20 @@ const Navbar = () => {
               key={item.link}
               to={item.link}
               smooth={true}
-              duration={1000}
+              duration={500}
               className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2"
             >
               {item.label}
             </Link>
           ))}
-          <NavLink
-            to=""
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
             className="block py-2 mt-4 text-center text-white bg-black rounded-lg text-[14px] hover:bg-gray-800 transition-all duration-300"
           >
             Hire Me
-          </NavLink>
+          </Link>
         </div>
       </section>
     </>
