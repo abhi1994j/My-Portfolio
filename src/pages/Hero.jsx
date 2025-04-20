@@ -89,7 +89,7 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center items-center w-full md:w-1/2">
-            <div className="w-full max-w-md md:max-w-xs m-4">
+            <div className="w-full max-w-md md:max-w-xs m-4 transition-transform transform hover:scale-105 shadow-lg hover:shadow-2xl rounded-full bg-white/70 backdrop-blur-md border border-gray-200">
               <img
                 className="w-full object-cover block rounded-full"
                 src={profile}
