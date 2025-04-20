@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [flag, setFlag] = useState(false);
@@ -10,6 +10,24 @@ const Navbar = () => {
     setFlag(!flag);
   }
 
+  const navItems = [
+    {
+      label: "Hero",
+      link: "hero",
+    },
+    {
+      label: "About",
+      link: "about",
+    },
+    {
+      label: "Projects",
+      link: "projects",
+    },
+    {
+      label: "Contact",
+      link: "contact",
+    },
+  ];
   return (
     <>
       <nav className="w-full py-4 px-2 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
@@ -17,27 +35,31 @@ const Navbar = () => {
           <span className="text-2xl font-semibold">Abhishek.</span>
 
           <ul className="hidden md:flex md:items-center gap-8">
-            {["Home", "About", "Projects", "Contact"].map((item) => (
+            {navItems.map((item) => (
               <li
-                key={item}
+                key={item.label}
                 className="text-gray-600 hover:text-gray-900 active:text-gray-800 transition-colors duration-300 ease-in-out"
               >
-                <NavLink
-                  to=""
+                <Link
+                  to={item.link}
+                  smooth={true}
+                  duration={500}
                   className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2"
                 >
-                  {item}
-                </NavLink>
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
 
-          <NavLink
-            to=""
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
             className="hidden text-center md:block py-2 px-4 text-white bg-black rounded-lg text-[16px] transition-all duration-300 hover:bg-gray-800"
           >
             Hire Me
-          </NavLink>
+          </Link>
 
           <button
             className="text-2xl block md:hidden cursor-pointer transition-transform duration-300"
@@ -61,14 +83,16 @@ const Navbar = () => {
         }`}
       >
         <div className="p-4 space-y-2">
-          {["Home", "About", "Projects", "Contact"].map((item) => (
-            <NavLink
-              key={item}
-              to=""
+          {navItems.map((item) => (
+            <Link
+              key={item.link}
+              to={item.link}
+              smooth={true}
+              duration={1000}
               className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2"
             >
-              {item}
-            </NavLink>
+              {item.label}
+            </Link>
           ))}
           <NavLink
             to=""

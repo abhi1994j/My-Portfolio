@@ -3,6 +3,7 @@ import { LuPhone } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -58,12 +59,12 @@ const Contact = () => {
             projects and activities.
           </p>
           <div className="flex gap-2">
-            <span className="bg-gray-50 hover:bg-gray-200 text-center rounded-full cursor-pointer">
+            <NavLink target="blank" to="https://github.com/abhi1994j" className="bg-gray-50 hover:bg-gray-200 text-center rounded-full cursor-pointer">
               <FaGithub className="text-5xl p-3" />
-            </span>
-            <span className="bg-gray-50 hover:bg-gray-200 text-center rounded-full cursor-pointer">
+            </NavLink>
+            <NavLink target="blank" to="https://www.linkedin.com/in/abhishek-chatterjee-9a7709209" className="bg-gray-50 hover:bg-gray-200 text-center rounded-full cursor-pointer">
               <FaLinkedin className="text-5xl p-3" />
-            </span>
+            </NavLink>
           </div>
         </div>
       </section>

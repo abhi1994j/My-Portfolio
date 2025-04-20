@@ -5,6 +5,7 @@ import { LuLinkedin } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation"; // <-- Import this
 import { MdOutlineEmail } from "react-icons/md";
+import { Element, Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -19,11 +20,11 @@ const Hero = () => {
             {/* Typing animation here */}
             <TypeAnimation
               sequence={[
-                'Full Stack Developer',
+                "Full Stack Developer",
                 2000,
-                'Frontend Engineer',
+                "Frontend Engineer",
                 2000,
-                'Backend Engineer',
+                "Backend Engineer",
                 2000,
               ]}
               wrapper="p"
@@ -41,29 +42,47 @@ const Hero = () => {
             </div>
 
             <div className="flex items-center gap-2">
-              <NavLink
-                to=""
-                className="flex gap-3 text-[14px] items-center text-white bg-black px-4 py-2 rounded-md"
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="flex gap-3 text-[14px] cursor-pointer items-center text-white bg-black px-4 py-2 rounded-md"
               >
                 <span>Contact Me</span>
                 <span>
                   <FaArrowRight />
                 </span>
-              </NavLink>
-              <NavLink
-                to=""
+              </Link>
+              <Link
+                 to="projects"
+                 smooth={true}
+                 duration={500}
                 className="flex gap-2 text-[14px] items-center text-black bg-white px-4 py-2 border border-gray-300 hover:bg-gray-100 rounded-md"
               >
                 View Projects
-              </NavLink>
+              </Link>
             </div>
 
             <div className="flex items-center gap-4 text-xl md:text-2xl text-gray-500">
-              <NavLink className="hover:text-gray-700" to="">
+              <NavLink
+                target="blank"
+                className="hover:text-gray-700"
+                to="https://github.com/abhi1994j"
+              >
                 <FiGithub />
               </NavLink>
-              <NavLink className="hover:text-gray-700"><MdOutlineEmail /></NavLink>
-              <NavLink className="hover:text-gray-700" to="">
+              <NavLink
+                target="blank"
+                className="hover:text-gray-700"
+                to="mailto:abhibaban4@gmail.com"
+              >
+                <MdOutlineEmail />
+              </NavLink>
+              <NavLink
+                target="blank"
+                className="hover:text-gray-700"
+                to="https://www.linkedin.com/in/abhishek-chatterjee-9a7709209"
+              >
                 <LuLinkedin />
               </NavLink>
             </div>
