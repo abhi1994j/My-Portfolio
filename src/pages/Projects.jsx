@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { LuExternalLink } from "react-icons/lu";
 import { FiGithub } from "react-icons/fi";
 import ecommerce from "../assets/Ecommerce.jpg";
+
 const Projects = () => {
   return (
     <>

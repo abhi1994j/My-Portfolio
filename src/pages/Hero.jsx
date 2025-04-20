@@ -5,7 +5,7 @@ import { LuLinkedin } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation"; // <-- Import this
 import { MdOutlineEmail } from "react-icons/md";
-import { Element, Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -54,9 +54,9 @@ const Hero = () => {
                 </span>
               </Link>
               <Link
-                 to="projects"
-                 smooth={true}
-                 duration={500}
+                to="projects"
+                smooth={true}
+                duration={500}
                 className="flex gap-2 text-[14px] items-center text-black bg-white px-4 py-2 border border-gray-300 hover:bg-gray-100 rounded-md"
               >
                 View Projects
