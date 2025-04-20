@@ -23,6 +23,7 @@ const Hero = () => {
           <div
             className="flex flex-col justify-between md:items-start w-full md:w-1/2 space-y-6"
             data-aos="fade-right"
+            data-aos-delay="100"
           >
             <h1 className="font-bold text-3xl md:text-4xl lg:text-6xl">
               Hi, I'm Abhishek
@@ -43,7 +44,11 @@ const Hero = () => {
               className="text-[22px] text-gray-950 font-medium md:text-2xl lg:text-3xl"
             />
 
-            <div className="text-wrap w-full max-w-md md:max-w-lg">
+            <div
+              className="text-wrap w-full max-w-md md:max-w-lg"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               <p className="text-sm md:text-lg text-gray-500">
                 I build exceptional and accessible digital experiences for the
                 web. Passionate about creating solutions that are both
@@ -52,7 +57,7 @@ const Hero = () => {
             </div>
 
             {/* Buttons */}
-            <div className="flex items-center gap-2" data-aos="fade-up">
+            <div className="flex items-center gap-2" data-aos="fade-up" data-aos-delay="300">
               <Link
                 to="contact"
                 smooth={true}
@@ -76,7 +81,7 @@ const Hero = () => {
             <div
               className="flex items-center gap-4 text-xl md:text-2xl text-gray-500"
               data-aos="fade-right"
-              data-aos-delay="200"
+              data-aos-delay="400"
             >
               <NavLink
                 target="_blank"
@@ -106,6 +111,7 @@ const Hero = () => {
           <div
             className="flex justify-center items-center w-full md:w-1/2"
             data-aos="zoom-in"
+            data-aos-delay="500"
           >
             <div className="w-full max-w-md md:max-w-xs m-4 transition-transform transform hover:scale-105 shadow-lg hover:shadow-2xl rounded-full bg-white/70 backdrop-blur-md border border-gray-200 p-1">
               <img
