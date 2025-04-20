@@ -59,7 +59,7 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="hidden text-center md:block py-2 px-4 text-white bg-black rounded-lg text-[16px] transition-all duration-300 hover:bg-gray-800"
+            className="hidden cursor-pointer text-center md:block py-2 px-4 text-white bg-black rounded-lg text-[16px] transition-all duration-300 hover:bg-gray-800"
           >
             Hire Me
           </Link>
@@ -103,7 +103,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             onClick={() => setFlag(false)} // 👈 Close menu on click
-            className="block py-2 mt-4 text-center text-white bg-black rounded-lg text-[14px] hover:bg-gray-800 transition-all duration-300"
+            className="block cursor-pointer py-2 mt-4 text-center text-white bg-black rounded-lg text-[14px] hover:bg-gray-800 transition-all duration-300"
           >
             Hire Me
           </Link>

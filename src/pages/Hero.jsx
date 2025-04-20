@@ -46,7 +46,7 @@ const Hero = () => {
                 to="contact"
                 smooth={true}
                 duration={500}
-                className="flex gap-3 text-[14px] cursor-pointer items-center text-white bg-black px-4 py-2 rounded-md"
+                className="flex gap-3 text-[14px] cursor-pointer items-center text-white bg-black hover:bg-gray-800 px-4 py-2 rounded-md"
               >
                 <span>Contact Me</span>
                 <span>
