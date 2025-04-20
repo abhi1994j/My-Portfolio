@@ -47,7 +47,7 @@ const About = () => {
         <div
           className="flex flex-col space-y-4 items-center w-full max-w-lg sm:max-w-xl md:max-w-4xl"
           data-aos="fade-right"
-          data-aos-delay="200"
+          data-aos-delay="400"
         >
           <h1 className="text-3xl lg:text-4xl font-semibold">About Me</h1>
           <div className="h-1 rounded-lg w-20 bg-black inline-block"></div>
@@ -64,7 +64,7 @@ const About = () => {
           <div
             className="left flex flex-col space-y-4 w-full md:px-4"
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="500"
           >
             <h1 className="text-2xl font-semibold">My Journey</h1>
             <p className="text-gray-500">
@@ -82,7 +82,7 @@ const About = () => {
           <div
             className="right flex flex-col space-y-4 md:px-4"
             data-aos="fade-up"
-            data-aos-delay="400"
+            data-aos-delay="800"
           >
             <h1 className="text-2xl mb-4 font-bold">Education & Experience</h1>
             <div className="flex flex-col">
@@ -109,7 +109,7 @@ const About = () => {
                 key={ele}
                 className="bg-gray-200 px-3 py-1 font-semibold rounded-xl text-sm"
                 data-aos="fade-up"
-                data-aos-delay={index * 60} // Adjust for better stagger effect
+                data-aos-delay={index * 100} // Adjust for better stagger effect
               >
                 {ele}
               </div>
@@ -132,7 +132,7 @@ const About = () => {
               className="flex flex-col gap-4 items-center bg-white border border-gray-300 rounded-lg py-8 px-4 shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out"
               key={ele.heading}
               data-aos="flip-left"
-              data-aos-delay={index * 200 + 800} // Start a bit later for better flow
+              data-aos-delay={index * 100 + 500} // Start a bit later for better flow
             >
               <span className="bg-gray-200 rounded-full">
                 <ele.logo className="text-5xl p-3" />
