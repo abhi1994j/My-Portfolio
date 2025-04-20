@@ -35,8 +35,8 @@ const Navbar = () => {
     <>
       <nav className="w-full py-4 px-2 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
         <div className="flex justify-between items-center mx-2"> 
-          <span className="md:block hidden text-2xl font-semibold gradient-text shadow-text ml-3">Abhishek.</span>
-          <span className="block md:hidden text-2xl font-semibold gradient-text shadow-text ml-2">AC.</span>
+          <span className="md:block hidden cursor-pointer text-2xl font-semibold gradient-text shadow-text ml-3">Abhishek.</span>
+          <span className="block md:hidden text-2xl cursor-pointer font-semibold gradient-text shadow-text ml-2">AC.</span>
           <ul className="hidden md:flex md:items-center gap-8">
             {navItems.map((item) => (
               <li
