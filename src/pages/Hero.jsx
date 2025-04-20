@@ -75,7 +75,7 @@ const Hero = () => {
             {/* Social Icons */}
             <div
               className="flex items-center gap-4 text-xl md:text-2xl text-gray-500"
-              data-aos="fade-up"
+              data-aos="fade-right"
               data-aos-delay="200"
             >
               <NavLink
