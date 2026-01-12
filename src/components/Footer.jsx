@@ -1,8 +1,10 @@
-import { FaHeart } from 'react-icons/fa';
+import {  FaHeart } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 import { quickLinks, socialLinks } from '../constants/data';
 import { footerStyles } from '../constants/dummyStyles';
 
 const Footer = () => {
+  
   const currentYear = new Date().getFullYear();
 
   return (
@@ -24,15 +26,15 @@ const Footer = () => {
             <h3 className={footerStyles.sectionTitle}>Quick Links</h3>
             <nav className="flex flex-col space-y-2">
               {quickLinks.map((item) => (
-                <a
+                <Link
                   key={item.link}
-                  href={item.link}
+                  to={item.link}
                   smooth
                   duration={500}
                   className={footerStyles.link}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

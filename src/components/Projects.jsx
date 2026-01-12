@@ -7,6 +7,7 @@ import { projects } from '../constants/data';
 import { projectStyles } from '../constants/dummyStyles';
 
 const Projects = () => {
+  
   useEffect(() => {
     AOS.init({
       duration: 900,

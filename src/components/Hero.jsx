@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-
 import { Link } from 'react-scroll';
 import { TypeAnimation } from 'react-type-animation';
 import AOS from 'aos';
@@ -10,6 +9,7 @@ import { heroStyles } from '../constants/dummyStyles';
 import { socialLinks } from '../constants/data';
 
 const Hero = () => {
+  
   useEffect(() => {
     AOS.init({ duration: 1200, once: true });
   }, []);
@@ -50,23 +50,23 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className={heroStyles.buttonGroup}>
-            <a
-              href="contact"
+            <Link
+              to="contact"
               smooth
               duration={500}
               className={heroStyles.primaryButton}
             >
               <span>Contact Me</span>
               <FaArrowRight />
-            </a>
-            <a
-              href="projects"
+            </Link>
+            <Link
+              to="projects"
               smooth
               duration={500}
               className={heroStyles.secondaryButton}
             >
               View Projects
-            </a>
+            </Link>
           </div>
 
           {/* Social Links */}

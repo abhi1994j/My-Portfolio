@@ -6,6 +6,7 @@ import { contactInfo, socialLinks } from '../constants/data';
 import { contactStyles } from '../constants/dummyStyles';
 
 const Contact = () => {
+  
   useEffect(() => {
     AOS.init({
       duration: 900,

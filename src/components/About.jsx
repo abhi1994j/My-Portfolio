@@ -6,7 +6,7 @@ import { aboutStyles } from '../constants/dummyStyles';
 // import { skills, technologies } from '../constants/data';
 
 const About = () => {
-
+  
   useEffect(() => {
     AOS.init({
       duration: 1200,

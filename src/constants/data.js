@@ -15,7 +15,7 @@ const aboutContent = {
   journey: {
     title: 'My Journey',
     description:
-      'Full Stack Developer with 1 year of hands-on experience as a Front-End Developer, specializing in building scalable, responsive web applications. Proficient in modern front-end and back-end technologies, UI development, API integration, and performance optimization, with a strong focus on clean code and user experience.',
+      'Full Stack Developer with one year of practical experience in front-end development, focused on the responsive and scalable development of web applications. Proficient in user interface development, API integration, performance optimization, and modern technologies on the front-end and back-end. With a strong focus on clean code and user experience, using prompt engineering to drive AI tools to improve development workflows, generate optimized code, and increase problem-solving efficiency.',
   },
   education: {
     title: 'Education & Experience',
@@ -25,7 +25,7 @@ const aboutContent = {
       title: 'Frontend Developer',
       company: 'Shyam Steel Industries Limited',
       achievements: [
-        'Developed and maintained scalable React.js applications, improving performance and usability.',
+        'Worked on the live enterprise project Buildistan Field CRM, developing User and Order modules using React.js to improve application performance and usability.',
         'Built responsive, pixel-perfect UI from Figma designs using TailwindCSS.',
         'Integrated RESTful APIs with Axios/Fetch and optimized Redux state management.',
         {
@@ -65,6 +65,9 @@ const skills = [
     'HTML/CSS',
     'Tailwind CSS',
     'figma',
+    'Prompt Engineering',
+    'Claude Sonnet',
+    'Github Copilot',
     'Bootstrap',
     'Git',
     'Postman',
