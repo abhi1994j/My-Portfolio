@@ -27,7 +27,7 @@ const Navbar = () => {
     nav: `w-full py-4 px-4 md:px-8 sticky top-0 z-50 transition-all duration-300 ${
       isScrolled
         ? 'bg-white/90 backdrop-blur-lg shadow-lg'
-        : 'bg-transparent backdrop-blur-sm'
+        : 'bg-white/80 backdrop-blur-md shadow-sm'
     }`,
     container: 'max-w-7xl mx-auto flex justify-between items-center',
     logo: 'text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300',

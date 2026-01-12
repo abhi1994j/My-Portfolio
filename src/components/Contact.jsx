@@ -12,34 +12,47 @@ const Contact = () => {
   }, []);
 
   const contactStyles = {
-    section: 'w-full bg-gradient-to-br from-slate-50 via-indigo-50 to-slate-100 px-4 py-16',
+    section:
+      'w-full bg-gradient-to-br from-slate-50 via-indigo-50 to-slate-100 px-4 sm:px-6 lg:px-8 py-12 sm:py-16',
     container: 'max-w-7xl mx-auto',
     header: {
-      wrapper: 'flex flex-col items-center text-center space-y-5 mb-16',
-      title: 'text-4xl lg:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent',
-      divider: 'h-1.5 rounded-full w-24 bg-gradient-to-r from-indigo-600 to-violet-600',
-      description: 'text-lg text-gray-600 max-w-2xl leading-relaxed'
+      wrapper:
+        'flex flex-col items-center text-center space-y-4 sm:space-y-5 mb-12 sm:mb-16 px-2',
+      title:
+        'text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent',
+      divider:
+        'h-1.5 rounded-full w-20 sm:w-24 bg-gradient-to-r from-indigo-600 to-violet-600',
+      description:
+        'text-base sm:text-lg text-gray-600 max-w-2xl leading-relaxed px-2',
     },
     content: {
-      grid: 'grid grid-cols-1 lg:grid-cols-2 gap-12',
-      section: 'space-y-8',
-      sectionTitle: 'text-3xl font-bold text-gray-800 mb-6',
-      contactCard: 'flex items-center gap-5 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100',
-      iconWrapper: 'bg-gradient-to-br from-indigo-100 to-violet-100 rounded-full p-4 flex-shrink-0',
-      icon: 'text-4xl text-indigo-600',
-      textWrapper: 'flex flex-col',
-      label: 'font-semibold text-gray-800 text-lg mb-1',
-      value: 'text-gray-600 hover:text-indigo-600 transition-colors cursor-pointer',
-      socialGrid: 'flex gap-4',
-      socialCard: 'flex-1 bg-white hover:bg-gradient-to-br hover:from-indigo-50 hover:to-violet-50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center cursor-pointer border border-gray-100 hover:border-indigo-200',
-      socialIcon: 'text-5xl text-gray-700 hover:text-indigo-600 transition-colors'
+      grid: 'grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12',
+      section: 'space-y-6 sm:space-y-8',
+      sectionTitle: 'text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6',
+      contactCard:
+        'flex items-center gap-4 sm:gap-5 bg-white p-5 sm:p-6 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100',
+      iconWrapper:
+        'bg-gradient-to-br from-indigo-100 to-violet-100 rounded-full p-3 sm:p-4 flex-shrink-0',
+      icon: 'text-3xl sm:text-4xl text-indigo-600',
+      textWrapper: 'flex flex-col min-w-0 flex-1',
+      label: 'font-semibold text-gray-800 text-base sm:text-lg mb-1',
+      value:
+        'text-sm sm:text-base text-gray-600 hover:text-indigo-600 transition-colors cursor-pointer break-words',
+      socialGrid: 'flex flex-col sm:flex-row gap-3 sm:gap-4',
+      socialCard:
+        'flex-1 bg-white hover:bg-gradient-to-br hover:from-indigo-50 hover:to-violet-50 p-5 sm:p-6 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center cursor-pointer border border-gray-100 hover:border-indigo-200',
+      socialIcon:
+        'text-4xl sm:text-5xl text-gray-700 hover:text-indigo-600 transition-colors',
     },
     cta: {
-      wrapper: 'mt-12 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-2xl p-8 text-center text-white shadow-2xl',
-      title: 'text-2xl md:text-3xl font-bold mb-4',
-      description: 'text-indigo-100 mb-6 max-w-2xl mx-auto',
-      button: 'inline-flex items-center gap-2 px-8 py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg'
-    }
+      wrapper:
+        'mt-10 sm:mt-12 bg-gradient-to-r from-indigo-600 to-violet-600 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center text-white shadow-2xl',
+      title: 'text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4',
+      description:
+        'text-sm sm:text-base text-indigo-100 mb-5 sm:mb-6 max-w-2xl mx-auto px-2',
+      button:
+        'inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-lg text-sm sm:text-base',
+    },
   };
 
   const contactInfo = [
@@ -47,33 +60,33 @@ const Contact = () => {
       icon: MdOutlineEmail,
       label: 'Email',
       value: 'abhibaban4@gmail.com',
-      link: 'mailto:abhibaban4@gmail.com'
+      link: 'mailto:abhibaban4@gmail.com',
     },
     {
       icon: LuPhone,
       label: 'Phone',
       value: '8910374010',
-      link: 'tel:8910374010'
+      link: 'tel:8910374010',
     },
     {
       icon: IoLocationOutline,
       label: 'Location',
       value: 'Kolkata, India',
-      link: null
-    }
+      link: null,
+    },
   ];
 
   const socialLinks = [
     {
       icon: FaGithub,
       url: 'https://github.com/abhi1994j',
-      label: 'GitHub'
+      label: 'GitHub',
     },
     {
       icon: FaLinkedin,
       url: 'https://www.linkedin.com/in/abhishek-chatterjee-9a7709209',
-      label: 'LinkedIn'
-    }
+      label: 'LinkedIn',
+    },
   ];
 
   return (
@@ -85,9 +98,7 @@ const Contact = () => {
           data-aos="fade-down"
           data-aos-delay="100"
         >
-          <h1 className={contactStyles.header.title}>
-            Get In Touch
-          </h1>
+          <h1 className={contactStyles.header.title}>Get In Touch</h1>
           <div className={contactStyles.header.divider}></div>
           <p className={contactStyles.header.description}>
             Have a project in mind or want to discuss potential opportunities?
@@ -128,7 +139,9 @@ const Contact = () => {
                         {item.value}
                       </a>
                     ) : (
-                      <p className={contactStyles.content.value}>{item.value}</p>
+                      <p className={contactStyles.content.value}>
+                        {item.value}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -176,17 +189,18 @@ const Contact = () => {
 
             {/* Additional Info Card */}
             <div
-              className="mt-8 bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+              className="mt-6 sm:mt-8 bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100"
               data-aos="fade-left"
               data-aos-delay="500"
             >
-              <h3 className="text-xl font-bold text-gray-800 mb-4">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3 sm:mb-4">
                 Let's Work Together
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 I'm currently available for freelance work and full-time
                 opportunities. If you have a project that you want to get
-                started or think you need my help with something, then get in touch.
+                started or think you need my help with something, then get in
+                touch.
               </p>
             </div>
           </div>
@@ -202,7 +216,8 @@ const Contact = () => {
             Ready to Start Your Project?
           </h2>
           <p className={contactStyles.cta.description}>
-            Let's bring your ideas to life with cutting-edge web development solutions.
+            Let's bring your ideas to life with cutting-edge web development
+            solutions.
           </p>
           <a
             href="mailto:abhibaban4@gmail.com"
