@@ -1,6 +1,9 @@
-import { FiGlobe, FiDatabase } from "react-icons/fi";
+import { FiGlobe, FiDatabase, FiGithub } from "react-icons/fi";
 import { RiExpandLeftRightLine } from "react-icons/ri";
-import { LuServer } from "react-icons/lu";
+import { LuServer, LuLinkedin, LuPhone } from "react-icons/lu";
+import { IoLocationOutline } from 'react-icons/io5';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdOutlineEmail } from 'react-icons/md';
 import project_1 from '../assets/project_1.png';
 import project_2 from '../assets/project_2.png';
 
@@ -44,6 +47,13 @@ const aboutContent = {
   technologiesTitle: 'What I Do',
 };
 
+const navItems = [
+  { label: 'Home', link: 'hero' },
+  { label: 'About', link: 'about' },
+  { label: 'Projects', link: 'projects' },
+  { label: 'Contact', link: 'contact' },
+];
+
 const skills = [
     'Java',
     'Javascript',
@@ -59,7 +69,7 @@ const skills = [
     'Git',
     'Postman',
     'REST API',
-  ];
+];
   // 'TypeScript', 'AWS', 'Next.js','Docker','DSA'
 
 const technologies = [
@@ -84,6 +94,7 @@ const technologies = [
     Body: 'Creating RESTful APIs that connect frontend and backend systems.',
   },
 ];
+
 const projects = [
     {
       image: project_1,
@@ -118,5 +129,51 @@ const projects = [
       live_demo: 'https://zoomify-ruddy.vercel.app',
       code: 'https://github.com/abhi1994j/Zoomify',
     },
-  ];
-  export {aboutContent , skills ,technologies ,projects}
+];
+
+const socialLinks = [
+  {
+    icon: FiGithub,
+    url: 'https://github.com/abhi1994j',
+    label: 'GitHub',
+  },
+  {
+    icon: LuLinkedin,
+    url: 'https://www.linkedin.com/in/abhishek-chatterjee-9a7709209',
+    label: 'LinkedIn',
+  },
+  {
+    icon: MdOutlineEmail,
+    url: 'mailto:abhibaban4@gmail.com',
+    label: 'Email',
+  }
+];
+
+const contactInfo = [
+  {
+    icon: MdOutlineEmail,
+    label: 'Email',
+    value: 'abhibaban4@gmail.com',
+    link: 'mailto:abhibaban4@gmail.com',
+  },
+  {
+    icon: LuPhone,
+    label: 'Phone',
+    value: '8910374010',
+    link: 'tel:8910374010',
+  },
+  {
+    icon: IoLocationOutline,
+    label: 'Location',
+    value: 'Kolkata, India',
+    link: null,
+  },
+];
+
+const quickLinks = [
+  { label: 'Home', link: 'hero' },
+  { label: 'About', link: 'about' },
+  { label: 'Projects', link: 'projects' },
+  { label: 'Contact', link: 'contact' },
+];
+  export {navItems ,  contactInfo , aboutContent , skills ,technologies ,projects , socialLinks , quickLinks}

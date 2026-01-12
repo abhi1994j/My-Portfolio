@@ -3,7 +3,6 @@ import { LuExternalLink } from 'react-icons/lu';
 import { FiGithub } from 'react-icons/fi';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
 import { projects } from '../constants/data';
 import { projectStyles } from '../constants/dummyStyles';
 
