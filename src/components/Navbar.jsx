@@ -1,114 +1,125 @@
-import { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { RxCross2 } from "react-icons/rx";
-import { Link } from "react-scroll";
-import Ab from "../assets/Ab.svg";
-import Ac from "../assets/Ac.svg";
+import { useState, useEffect } from 'react';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { RxCross2 } from 'react-icons/rx';
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
-  const [flag, setFlag] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-
-  function handleClick() {
-    setFlag(!flag);
-  }
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
-    {
-      label: "Home",
-      link: "hero",
-    },
-    {
-      label: "About",
-      link: "about",
-    },
-    {
-      label: "Projects",
-      link: "projects",
-    },
-    {
-      label: "Contact",
-      link: "contact",
-    },
+    { label: 'Home', link: 'hero' },
+    { label: 'About', link: 'about' },
+    { label: 'Projects', link: 'projects' },
+    { label: 'Contact', link: 'contact' },
   ];
+
+  const navStyles = {
+    nav: `w-full py-4 px-4 md:px-8 sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled
+        ? 'bg-white/90 backdrop-blur-lg shadow-lg'
+        : 'bg-transparent backdrop-blur-sm'
+    }`,
+    container: 'max-w-7xl mx-auto flex justify-between items-center',
+    logo: 'text-2xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300',
+    desktopMenu: 'hidden md:flex items-center gap-8',
+    navItem:
+      'relative group cursor-pointer font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300',
+    navItemUnderline:
+      'absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-violet-600 group-hover:w-full transition-all duration-300',
+    ctaButton:
+      'hidden md:block px-6 py-2.5 text-white bg-gradient-to-r from-indigo-600 to-violet-600 rounded-lg font-medium hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer',
+    mobileMenuButton:
+      'md:hidden text-2xl text-gray-700 hover:text-indigo-600 transition-colors cursor-pointer',
+    mobileMenu: `md:hidden fixed left-0 right-0 bg-white shadow-xl transition-all duration-500 ease-in-out transform z-40 ${
+      isOpen
+        ? 'opacity-100 translate-y-0 top-[72px]'
+        : 'opacity-0 -translate-y-4 pointer-events-none -top-96'
+    }`,
+    mobileMenuItem:
+      'block py-4 px-6 text-center font-medium text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-all duration-300 border-b border-gray-100',
+    mobileCTA:
+      'block mx-6 my-4 py-3 text-center text-white bg-gradient-to-r from-indigo-600 to-violet-600 rounded-lg font-medium hover:shadow-lg transition-all duration-300',
+  };
+
   return (
     <>
-      <nav className="w-full py-4 px-2 sticky bg-transparent backdrop-blur-md top-0 z-50 transition-all duration-300">
-        <div className="flex justify-between items-center mx-2"> 
-          <span className="md:block hidden cursor-pointer text-2xl font-semibold gradient-text shadow-text ml-3">Abhishek.</span>
-          <span className="block md:hidden text-2xl cursor-pointer font-semibold gradient-text shadow-text ml-2">AC.</span>
-          <ul className="hidden md:flex md:items-center gap-8">
+      <nav className={navStyles.nav}>
+        <div className={navStyles.container}>
+          {/* Logo */}
+          <Link to="hero" smooth duration={500}>
+            <span className={`${navStyles.logo} hidden md:block`}>
+              Abhishek.
+            </span>
+            <span className={`${navStyles.logo} md:hidden`}>AC.</span>
+          </Link>
+
+          {/* Desktop Menu */}
+          <ul className={navStyles.desktopMenu}>
             {navItems.map((item) => (
-              <li
-                key={item.label}
-                className="text-gray-600 hover:text-gray-900 active:text-gray-800 cursor-pointer transition-colors duration-300 ease-in-out"
-              >
-                <Link
-                  to={item.link}
-                  smooth={true}
-                  duration={500}
-                  className="relative inline-block transition-all duration-300 after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2"
-                >
+              <li key={item.label} className={navStyles.navItem}>
+                <Link to={item.link} smooth duration={500}>
                   {item.label}
+                  <span className={navStyles.navItemUnderline}></span>
                 </Link>
               </li>
             ))}
           </ul>
 
+          {/* Desktop CTA */}
           <Link
             to="contact"
-            smooth={true}
+            smooth
             duration={500}
-            className="hidden cursor-pointer text-center md:block py-2 px-4 text-white bg-black rounded-lg text-[16px] transition-all duration-300 hover:bg-gray-800"
+            className={navStyles.ctaButton}
           >
             Hire Me
           </Link>
 
+          {/* Mobile Menu Button */}
           <button
-            className="text-2xl block md:hidden cursor-pointer transition-transform duration-300"
-            onClick={handleClick}
+            className={navStyles.mobileMenuButton}
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
-            {flag ? (
-              <RxCross2 className="transition-transform duration-300 rotate-90" />
-            ) : (
-              <AiOutlineMenu />
-            )}
+            {isOpen ? <RxCross2 /> : <AiOutlineMenu />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Menu with transition */}
-      <section
-        className={`md:hidden fixed top-16 left-0 w-full bg-white shadow-md z-50 transition-all duration-500 ease-in-out transform ${
-          flag
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10 pointer-events-none"
-        }`}
-      >
-        <div className="p-4 space-y-2">
-          {navItems.map((item) => (
-            <Link
-              key={item.link}
-              to={item.link}
-              smooth={true}
-              duration={500}
-              onClick={() => setFlag(false)} // 👈 Close menu on click
-              className="block font-normal py-2 text-gray-900 hover:text-gray-600 text-center active:text-gray-800 transition-all duration-300 relative after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 after:origin-center hover:after:w-full after:-translate-x-1/2"
-            >
-              {item.label}
-            </Link>
-          ))}
+      {/* Mobile Menu */}
+      <div className={navStyles.mobileMenu}>
+        {navItems.map((item) => (
           <Link
-            to="contact"
-            smooth={true}
+            key={item.link}
+            to={item.link}
+            smooth
             duration={500}
-            onClick={() => setFlag(false)} // 👈 Close menu on click
-            className="block cursor-pointer py-2 mt-4 text-center text-white bg-black rounded-lg text-[14px] hover:bg-gray-800 transition-all duration-300"
+            onClick={() => setIsOpen(false)}
+            className={navStyles.mobileMenuItem}
           >
-            Hire Me
+            {item.label}
           </Link>
-        </div>
-      </section>
+        ))}
+        <Link
+          to="contact"
+          smooth
+          duration={500}
+          onClick={() => setIsOpen(false)}
+          className={navStyles.mobileCTA}
+        >
+          Hire Me
+        </Link>
+      </div>
     </>
   );
 };

@@ -1,9 +1,8 @@
-import React from "react";
-import Hero from "./Hero";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import About from "../components/About";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
 import { Element } from "react-scroll";
+import Hero from "../components/Hero";
 
 const HomeLayout = () => {
   return (
@@ -22,7 +21,7 @@ const HomeLayout = () => {
       <Element name="contact">
         <Contact />
       </Element>
-      
+
     </>
   );
 };
