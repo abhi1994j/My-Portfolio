@@ -4,6 +4,46 @@ import { LuServer } from "react-icons/lu";
 import project_1 from '../assets/project_1.png';
 import project_2 from '../assets/project_2.png';
 
+
+const aboutContent = {
+  title: 'About Me',
+  introduction:
+    "I'm a passionate full stack developer with a focus on creating efficient, scalable, and user-friendly web applications.",
+  journey: {
+    title: 'My Journey',
+    description:
+      'Full Stack Developer with 1 year of hands-on experience as a Front-End Developer, specializing in building scalable, responsive web applications. Proficient in modern front-end and back-end technologies, UI development, API integration, and performance optimization, with a strong focus on clean code and user experience.',
+  },
+  education: {
+    title: 'Education & Experience',
+    degree: 'Bachelor of Computer Science',
+    institution: 'Acharya Prafulla Chandra College (2015-2019)',
+    experience: {
+      title: 'Frontend Developer',
+      company: 'Shyam Steel Industries Limited',
+      achievements: [
+        'Developed and maintained scalable React.js applications, improving performance and usability.',
+        'Built responsive, pixel-perfect UI from Figma designs using TailwindCSS.',
+        'Integrated RESTful APIs with Axios/Fetch and optimized Redux state management.',
+        {
+          text: 'Improved UI performance by ',
+          highlight: '30%',
+          suffix: ' and reduced load times.',
+        },
+        {
+          text: 'Delivered bi-weekly feature updates, maintaining ',
+          highlight: '99.9% uptime',
+          suffix: ' for ',
+          highlight2: '2,000+ active users',
+          end: '.',
+        },
+      ],
+    },
+  },
+  skillsTitle: 'My Skills',
+  technologiesTitle: 'What I Do',
+};
+
 const skills = [
     'Java',
     'Javascript',
@@ -79,4 +119,4 @@ const projects = [
       code: 'https://github.com/abhi1994j/Zoomify',
     },
   ];
-  export {skills ,technologies ,projects}
+  export {aboutContent , skills ,technologies ,projects}

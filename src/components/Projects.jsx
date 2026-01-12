@@ -8,15 +8,19 @@ import { projects } from '../constants/data';
 import { projectStyles } from '../constants/dummyStyles';
 
 const Projects = () => {
-
-
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({
+      duration: 900,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100,
+    });
   }, []);
 
   return (
-    <section className={projectStyles.section}>
+    <section className={projectStyles.section} id="projects">
       <div className={projectStyles.container}>
+        {/* Header */}
         <div className={projectStyles.header.wrapper} data-aos="fade-down">
           <h1 className={projectStyles.header.title}>Featured Projects</h1>
           <div className={projectStyles.header.divider}></div>
@@ -26,19 +30,23 @@ const Projects = () => {
           </p>
         </div>
 
+        {/* Projects Grid */}
         <div className={projectStyles.grid}>
           {projects.map((project, index) => (
             <div
               key={index}
               className={projectStyles.card.wrapper}
               data-aos="fade-up"
-              data-aos-delay={index * 150}
+              data-aos-delay={index * 120}
             >
+              {/* Image */}
               <a
                 href={project.live_demo}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={projectStyles.card.imageWrapper}
+                data-aos="zoom-in"
+                data-aos-delay={index * 120}
               >
                 <img
                   src={project.image}
@@ -47,7 +55,12 @@ const Projects = () => {
                 />
               </a>
 
-              <div className={projectStyles.card.content}>
+              {/* Content */}
+              <div
+                className={projectStyles.card.content}
+                data-aos="fade-up"
+                data-aos-delay={index * 150 + 100}
+              >
                 <a
                   href={project.live_demo}
                   target="_blank"
@@ -62,14 +75,21 @@ const Projects = () => {
                   {project.description}
                 </p>
 
+                {/* Tech Stack */}
                 <div className={projectStyles.card.techWrapper}>
                   {project.tech.map((tech, i) => (
-                    <span key={i} className={projectStyles.card.techBadge}>
+                    <span
+                      key={i}
+                      className={projectStyles.card.techBadge}
+                      data-aos="fade-up"
+                      data-aos-delay={i * 80}
+                    >
                       {tech}
                     </span>
                   ))}
                 </div>
 
+                {/* Buttons */}
                 <div className={projectStyles.card.buttonWrapper}>
                   <a
                     href={project.live_demo}
@@ -80,6 +100,7 @@ const Projects = () => {
                     <LuExternalLink />
                     Live Demo
                   </a>
+
                   <a
                     href={project.code}
                     target="_blank"
