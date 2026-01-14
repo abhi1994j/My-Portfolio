@@ -6,7 +6,7 @@ import { contactInfo, socialLinks } from '../constants/data';
 import { contactStyles } from '../constants/dummyStyles';
 
 const Contact = () => {
-  
+
   useEffect(() => {
     AOS.init({
       duration: 900,
@@ -96,7 +96,11 @@ const Contact = () => {
         </div>
 
         {/* CTA */}
-        <div className={contactStyles.cta.wrapper} data-aos="zoom-in-up">
+        <div
+          className={contactStyles.cta.wrapper}
+          data-aos="zoom-in-up"
+          data-aos-delay="300"
+        >
           <h2 className={contactStyles.cta.title}>
             Ready to Start Your Project?
           </h2>
